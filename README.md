@@ -4,13 +4,13 @@ Built a integrated Tweet Ranking System by using vector space retrieval and page
 
 
 ## Implementation
-The implementation consist of three parts:
+The implementation consists of three parts:
 
 ### 1. A vector space retrieval system on tweets
 This vector space retrieval system only bases on tweets' texts. I extracted tweets texts from Json file. For each tweet, tokenized each tweet's text using whitespaces and punctuations as delimiters, and changed all letters to lowercase. Then, used tf-idf to build the vector space model. Each tweet text can be considered as a document, the system returns results ordered by the cosine similarity between the tf-idf of the tweet text and the query.
 
 * Tweets with higher similarity to the query should be first.
-* Using vector space retrieval instead of a pure AND search, but if the tweets do not contain any terms in the query, I do not calculate the cosine similarity
+* Using vector space retrieval instead of a pure AND search, but if the tweets do not contain any terms in the query, do not calculate the cosine similarity
 * If a query returns more than 50 results, only return the first 50.
 * If any of the tokens in the query do not occur in the tweet corpus, then the idf will be undefined, the system should return no results.
 
