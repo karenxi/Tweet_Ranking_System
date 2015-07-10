@@ -224,7 +224,7 @@ def main(query):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print "python myhw2.py 'query'"
+        print "python tweets_retrieval.py 'query'"
     else:
         print sys.argv[1]
         main(sys.argv[1])
